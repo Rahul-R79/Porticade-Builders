@@ -8,6 +8,8 @@ import PolicyCarousel from './components/PolicyCarousel';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
+import SocialWidget from './components/SocialWidget';
+
 function App() {
     return (
         <div>
@@ -20,6 +22,7 @@ function App() {
             <PolicyCarousel />
             <ContactSection />
             <Footer />
+            <SocialWidget />
         </div>
     );
 }
