@@ -3,9 +3,20 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Reveal from './Reveal';
 
 const images = [
-    { id: 1, src: "/images/Rectangle 12.webp", alt: "Modern Building Main" },
-    { id: 2, src: "/images/Rectangle 13-1.webp", alt: "Side View Building" },
-    { id: 3, src: "/images/Rectangle 13.jpg", alt: "Architectural Detail" },
+    { id: 1, src: "/images/Picture Gallery Images/1000184976.webp", alt: "Project Image 1" },
+    { id: 2, src: "/images/Picture Gallery Images/1000184982.webp", alt: "Project Image 2" },
+    { id: 3, src: "/images/Picture Gallery Images/20251219_2014_Residential Parking Conversion_remix_01kcvh1134f8bt2jcrc3hpdr6j (1).webp", alt: "Residential Parking Conversion" },
+    { id: 4, src: "/images/Picture Gallery Images/20251219_2028_White House Transformation_remix_01kcvhv0p1ffcsg8ty34q3rw1r (1).webp", alt: "White House Transformation" },
+    { id: 5, src: "/images/Picture Gallery Images/IMG_5560.webp", alt: "Project Image 5" },
+    { id: 6, src: "/images/Picture Gallery Images/Rectangle 12.webp", alt: "Project Image 6" },
+    { id: 7, src: "/images/Picture Gallery Images/Rectangle 13-1.webp", alt: "Project Image 7" },
+    { id: 8, src: "/images/Picture Gallery Images/Rectangle 13.jpg", alt: "Project Image 8" },
+    { id: 9, src: "/images/Picture Gallery Images/bal.webp", alt: "Balcony Project 1" },
+    { id: 10, src: "/images/Picture Gallery Images/bal2.webp", alt: "Balcony Project 2" },
+    { id: 11, src: "/images/Picture Gallery Images/bal3.webp", alt: "Balcony Project 3" },
+    { id: 12, src: "/images/Picture Gallery Images/bal4.webp", alt: "Balcony Project 4" },
+    { id: 13, src: "/images/Picture Gallery Images/nedu.webp", alt: "Nedu Project 1" },
+    { id: 14, src: "/images/Picture Gallery Images/nedu2.webp", alt: "Nedu Project 2" },
 ];
 
 const ProjectGallery = () => {
