@@ -1,4 +1,9 @@
+import { useState } from 'react';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
+
 const ContactModal = ({ isOpen, onClose }) => {
+    const [phone, setPhone] = useState('');
     if (!isOpen) return null;
 
     return (
@@ -92,15 +97,16 @@ const ContactModal = ({ isOpen, onClose }) => {
                             className="w-full px-4 py-3 rounded-full border border-gray-200 text-gray-700 text-sm focus:outline-none focus:border-gray-400 transition-colors"
                         />
 
-                        <div className="flex w-full px-4 py-3 rounded-full border border-gray-200 text-gray-700 text-sm focus-within:border-gray-400 transition-colors bg-white items-center">
-                            <span className="text-gray-500 mr-2 font-medium">+91</span>
-                            <div className="w-px h-4 bg-gray-300 mx-2"></div>
-                            <input
-                                type="tel"
-                                placeholder="Phone Number"
-                                className="flex-1 outline-none bg-transparent"
-                            />
-                        </div>
+                        <PhoneInput
+                            country={'in'}
+                            value={phone}
+                            onChange={phone => setPhone(phone)}
+                            containerClass="!w-full"
+                            inputClass="!w-full !pl-14 !pr-4 !py-3 !h-[46px] !rounded-full !border !border-gray-200 !text-gray-700 !text-sm focus:!border-gray-400 !transition-colors"
+                            buttonClass="!rounded-l-full !border-gray-200 !bg-transparent hover:!bg-transparent !pl-3"
+                            dropdownClass="!shadow-lg !rounded-lg !mt-2"
+                            buttonStyle={{ border: 'none', borderRight: '1px solid #e5e7eb', borderRadius: '9999px 0 0 9999px' }}
+                        />
 
                         <textarea
                             rows="4"

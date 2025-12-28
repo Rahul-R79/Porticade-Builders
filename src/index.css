@@ -3,5 +3,11 @@
 @theme {
     --color-brand-light: #bedce4;
     --color-brand-dark: #2b3431;
-    --font-sans: "Inter", system-ui, sans-serif; 
+    --font-sans: "Inter", system-ui, sans-serif;
+}
+
+.react-tel-input .flag-dropdown:hover,
+.react-tel-input .flag-dropdown.open .selected-flag,
+.react-tel-input .selected-flag:hover {
+    background-color: transparent !important;
 }
