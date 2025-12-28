@@ -26,8 +26,8 @@ const Footer = () => {
 
                     {/* Direct Contact Information Column */}
                     <div className="lg:w-1/3 flex flex-col gap-3 text-sm font-semibold text-gray-800 lg:text-center items-start lg:items-center">
-                        <p>Phone : +91 9895 60151</p>
-                        <p>Email Address : porticade.builders@gmail.com</p>
+                        <p>Phone : +91 9895631515</p>
+                        <p>Email Address : porticade911@gmail.com</p>
                     </div>
 
                     {/* Social Media Links Column */}

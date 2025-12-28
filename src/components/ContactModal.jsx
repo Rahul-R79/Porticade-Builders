@@ -42,8 +42,8 @@ const ContactModal = ({ isOpen, onClose }) => {
                     </div>
 
                     <div className="space-y-4 font-medium text-sm md:text-base">
-                        <p>Phone : +91 9895 60151</p>
-                        <p>Email Address : porticade.builders@gmail.com</p>
+                        <p>Phone : +91 9895631515</p>
+                        <p>Email Address : porticade911@gmail.com</p>
                     </div>
 
                     <div className="mt-4">
