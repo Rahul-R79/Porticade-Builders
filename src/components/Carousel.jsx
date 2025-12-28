@@ -59,7 +59,7 @@ const Carousel = ({ children, autoPlay = false, interval = 5000, className = "" 
         /* Main Container: Handles the carousel structure and overflow */
         <div className={`relative flex flex-col items-center justify-center w-full overflow-hidden ${className}`}>
 
-            /* Slide Area: Contains the animated slides */
+            {/* Slide Area: Contains the animated slides */}
             <div className="relative w-full h-full min-h-75 flex items-center justify-center">
                 <AnimatePresence initial={false} custom={direction} mode="popLayout">
                     <motion.div
@@ -93,7 +93,7 @@ const Carousel = ({ children, autoPlay = false, interval = 5000, className = "" 
             </div>
 
             {/* Pagination Controls: Dots to navigate slides */}
-            <div className="flex gap-2 mt-6 z-10">
+            <div className="flex gap-2 mt-10 z-10">
                 {Array.from({ length: count }).map((_, idx) => (
                     <button
                         key={idx}
