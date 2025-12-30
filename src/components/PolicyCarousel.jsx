@@ -6,12 +6,12 @@ const policies = [
         text: "All Works Are Carried Out As Per Approved Quotations, Tenders, And Designs. Any Modifications In Design, Material, Or Scope During Execution Will Be Treated As Additional Works And Charged Accordingly"
     },
     {
-        title: "Payment Policy",
-        text: "Payments are to be made in stages as per the agreed schedule. Delays in payment may result in project timelines being extended. Final handover will occur only after full settlement of dues."
+        title: "Privacy Policy",
+        text: "Porticade respects the confidentiality of clientdata,design concepts, and project details. Informationcollected is used solely for communicationandservicedelivery purposes."
     },
     {
-        title: "Warranty Policy",
-        text: "We provide a structural warranty of 10 years and a 1-year warranty on finishing works. This covers defects in workmanship and materials used, subject to normal wear and tear."
+        title: "Refund Policy",
+        text: "Payments made toward project mobilization, designfees, or material procurement are non-refundableonce work has commenced. Refunds, if applicable,willbe processed based on project stageandmanagement discretion."
     }
 ];
 
@@ -44,9 +44,9 @@ const PolicyCarousel = () => {
                             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                         >
                             {policies.map((policy, index) => (
-                                <div key={index} className="w-full flex-shrink-0 px-4">
+                                <div key={index} className="w-full shrink-0 px-4">
                                     {/* Policy Card */}
-                                    <div className="bg-gradient-to-b from-gray-500 to-[#2B3431] p-8 md:p-12 lg:p-16 rounded-3xl text-center min-h-[300px] flex flex-col items-center justify-center">
+                                    <div className="bg-linear-to-b from-gray-500 to-[#2B3431] p-8 md:p-12 lg:p-16 rounded-3xl text-center min-h-75 flex flex-col items-center justify-center">
                                         <h3 className="text-2xl md:text-3xl font-medium text-white mb-6">
                                             {policy.title}
                                         </h3>

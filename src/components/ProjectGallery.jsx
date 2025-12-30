@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Reveal from './Reveal';
 
@@ -21,6 +21,7 @@ const images = [
 
 const ProjectGallery = () => {
     const [activeIndex, setActiveIndex] = useState(1);
+    const lastWheelTime = useRef(0);
     const nextSlide = () => {
         setActiveIndex((prev) => (prev + 1) % images.length);
     };
@@ -28,11 +29,6 @@ const ProjectGallery = () => {
     const prevSlide = () => {
         setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
     };
-
-    useEffect(() => {
-        const interval = setInterval(nextSlide, 3000);
-        return () => clearInterval(interval);
-    }, [activeIndex]);
 
     const getSlideStyles = (index) => {
         if (index === activeIndex) return {
@@ -71,7 +67,7 @@ const ProjectGallery = () => {
     return (
         /* Gallery Section Layout */
         <section className="w-full bg-[#F2F9FD] py-20 overflow-hidden">
-            <div className="max-w-[1400px] mx-auto text-center">
+            <div className="max-w-350 mx-auto text-center">
 
                 {/* Section Title */}
                 <Reveal direction="down">
@@ -81,17 +77,36 @@ const ProjectGallery = () => {
                 </Reveal>
 
                 {/* 3D Carousel Display Area */}
-                <div className="relative h-[400px] md:h-[500px] flex items-center justify-center mt-10">
-                    <div className="relative w-full max-w-4xl h-full flex items-center justify-center">
+                <div
+                    className="relative h-100 md:h-125 flex items-center justify-center mt-10 cursor-grab active:cursor-grabbing touch-none"
+                    onWheel={(e) => {
+                        const now = Date.now();
+                        if (now - lastWheelTime.current < 400) return;
+
+                        if (Math.abs(e.deltaX) > 20 || Math.abs(e.deltaY) > 20) {
+                            if (e.deltaX > 0 || e.deltaY > 0) nextSlide();
+                            else prevSlide();
+                            lastWheelTime.current = now;
+                        }
+                    }}
+                >
+                    <motion.div
+                        className="relative w-full max-w-4xl h-full flex items-center justify-center"
+                        drag="x"
+                        dragConstraints={{ left: 0, right: 0 }}
+                        onDragEnd={(_, info) => {
+                            if (info.offset.x < -50) nextSlide();
+                            if (info.offset.x > 50) prevSlide();
+                        }}
+                    >
                         <AnimatePresence initial={false}>
                             {images.map((img, index) => {
                                 const styles = getSlideStyles(index);
-                                const isCenter = index === activeIndex;
 
                                 return (
                                     <motion.div
                                         key={img.id}
-                                        className="absolute w-[80%] md:w-[60%] lg:w-[50%] h-[250px] md:h-[350px] lg:h-[400px] rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
+                                        className="absolute w-[80%] md:w-[60%] lg:w-[50%] h-62.5 md:h-87.5 lg:h-100 rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
                                         initial={styles}
                                         animate={styles}
                                         transition={{
@@ -109,25 +124,39 @@ const ProjectGallery = () => {
                                         <img
                                             src={img.src}
                                             alt={img.alt}
-                                            className="w-full h-full object-cover"
+                                            className="w-full h-full object-cover pointer-events-none"
                                         />
                                     </motion.div>
                                 );
                             })}
                         </AnimatePresence>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Navigation Dots */}
                 <div className="flex justify-center gap-2 mt-8">
-                    {images.map((_, idx) => (
-                        <button
-                            key={idx}
-                            onClick={() => setActiveIndex(idx)}
-                            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-[#333333] w-8' : 'bg-gray-300'
-                                }`}
-                        />
-                    ))}
+                    {(() => {
+                        let start = Math.max(0, activeIndex - 1);
+                        let end = Math.min(images.length - 1, activeIndex + 1);
+
+                        if (activeIndex === 0) {
+                            end = Math.min(2, images.length - 1);
+                        } else if (activeIndex === images.length - 1) {
+                            start = Math.max(0, images.length - 3);
+                        }
+
+                        return images.slice(start, end + 1).map((_, i) => {
+                            const idx = start + i;
+                            return (
+                                <button
+                                    key={idx}
+                                    onClick={() => setActiveIndex(idx)}
+                                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${idx === activeIndex ? 'bg-[#333333] w-8' : 'bg-gray-300'
+                                        }`}
+                                />
+                            );
+                        });
+                    })()}
                 </div>
             </div>
         </section>

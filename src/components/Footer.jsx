@@ -26,7 +26,7 @@ const Footer = () => {
 
                     {/* Direct Contact Information Column */}
                     <div className="lg:w-1/3 flex flex-col gap-3 text-sm font-semibold text-gray-800 lg:text-center items-start lg:items-center">
-                        <p>Phone : +91 9895631515</p>
+                        <p>Phone : +91 98956 31515</p>
                         <p>Email Address : porticade911@gmail.com</p>
                     </div>
 
@@ -35,7 +35,7 @@ const Footer = () => {
                         <a href="https://www.facebook.com/people/Porticade-Builders/61585167496393/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-[#bfdce3] hover:bg-[#aaccf0] transition-colors">
                             <img src="/icons/facebook.svg" alt="Facebook" className="w-5 h-5 opacity-80" />
                         </a>
-                        <a href="https://www.instagram.com/porticade_55/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-[#bfdce3] hover:bg-[#aaccf0] transition-colors">
+                        <a href="https://www.instagram.com/porticadebuilders?igsh=azM2a3h2cDA1bnlj" target="_blank" rel="noopener noreferrer" className="w-12 h-12 flex items-center justify-center rounded-full bg-[#bfdce3] hover:bg-[#aaccf0] transition-colors">
                             <img src="/icons/instagram.svg" alt="Instagram" className="w-5 h-5 opacity-80" />
                         </a>
                     </div>

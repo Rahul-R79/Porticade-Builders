@@ -83,7 +83,7 @@ const ServiceSection = () => {
                     {/* Images Left */}
                     <div className="w-full lg:w-1/2 relative h-[500px] flex items-center justify-center">
                         {/* Background Grey Rectangle */}
-                        <Reveal direction="left" className="absolute top-0 left-0">
+                        <Reveal direction="left" className="absolute top-[-20px] left-[-20px]">
                             <img src="/images/Rectangle 10.png" alt="" className="w-40 h-auto opacity-80" />
                         </Reveal>
 
