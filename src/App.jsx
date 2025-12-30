@@ -1,7 +1,28 @@
+import HeroSection from './components/HeroSection';
+import VisionMission from './components/VisionMission';
+import FounderValues from './components/FounderValues';
+import ServiceSection from './components/ServiceSection';
+import ProjectGallery from './components/ProjectGallery';
+import ReviewSection from './components/ReviewSection';
+import PolicyCarousel from './components/PolicyCarousel';
+import ContactSection from './components/ContactSection';
+import Footer from './components/Footer';
+
+import SocialWidget from './components/SocialWidget';
+
 function App() {
     return (
         <div>
-            <h1 className="text-3xl font-bold underline">PORTICADE BUILDERS</h1>
+            <HeroSection />
+            <VisionMission />
+            <FounderValues />
+            <ServiceSection />
+            <ProjectGallery />
+            <ReviewSection />
+            <PolicyCarousel />
+            <ContactSection />
+            <Footer />
+            <SocialWidget />
         </div>
     );
 }
