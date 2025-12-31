@@ -69,7 +69,7 @@ const ContactSection = () => {
                             allowFullScreen=""
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
-                            className="w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
+                            className="w-full h-full grayscale-0 md:grayscale md:hover:grayscale-0 transition-all duration-500"
                         ></iframe>
                     </Reveal>
 
