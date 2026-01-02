@@ -40,7 +40,7 @@ const VisionMission = () => {
                         </Reveal>
                         <Reveal direction="right" delay={0.2}>
                             <p className="text-gray-300 text-lg leading-relaxed font-light">
-                                To Become Kerala’s Most Trusted And Innovative Construction Partner, Known For Delivering Quality-Driven Projects That Shape Better Communities. We Aim To Expand Our Presence Across Government And Private Sectors While Staying Committed To Engineering Excellence, Sustainable Practices, And Long-Term Client Relationships.
+                                To become Kerala’s most trusted and innovative construction partner, known for delivering quality-driven projects that shape better communities. We aim to expand our presence across government and private sectors while staying committed to engineering excellence, sustainable practices, and long-term client relationships.
                             </p>
                         </Reveal>
                     </div>
@@ -81,7 +81,7 @@ const VisionMission = () => {
                         </Reveal>
                         <Reveal direction="left" delay={0.2}>
                             <p className="text-gray-300 text-lg leading-relaxed font-light">
-                                Our Mission Is To Deliver Every Project With Integrity, Transparency, And Exceptional Quality By Integrating Modern Design With Strong Construction Practices. We Are Committed To Completing Government, Institutional, And Residential Projects On Time While Upholding The Highest Safety Standards. Through Continuous Innovation, Responsible Engineering, And Advanced Technologies, We Aim To Enhance Efficiency, Reduce Environmental Impact, And Build Long-Lasting Relationships Based On Trust, Reliability, And Value.
+                                Our mission is to deliver every project with integrity, transparency, and exceptional quality by integrating modern design with strong construction practices. We are committed to completing government, institutional, and residential projects on time while upholding the highest safety standards. Through continuous innovation, responsible engineering, and advanced technologies, we aim to enhance efficiency, reduce environmental impact, and build long-lasting relationships based on trust, reliability, and value.
                             </p>
                         </Reveal>
                     </div>

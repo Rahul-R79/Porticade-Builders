@@ -1,7 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Reveal from "./Reveal";
 import ContactModal from "./ContactModal";
+import Seo from "../seo/Seo";
+import LocalBusinessSchema from "../seo/LocalBusinessSchema";
 
 const HeroSection = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -10,7 +12,7 @@ const HeroSection = () => {
     const heroImages = [
         "/images/Rectangle 1.webp",
         "/images/Rectangle 33.webp",
-        "/images/Rectangle 18.webp"
+        "/images/Rectangle 18.webp",
     ];
 
     useEffect(() => {
@@ -22,6 +24,13 @@ const HeroSection = () => {
 
     return (
         <div className='w-full font-sans overflow-x-hidden'>
+            {/* seo setup for application */}
+            <Seo
+                title='Porticade Builders & Developers Pvt Ltd | Best Home Builders in Trivandrum'
+                description='Porticade Builders & Developers Pvt Ltd is one of the best home construction builders in Trivandrum, Mannanthala & Nalanchira.'
+                canonical='https://porticadebuilders.com/'
+            />
+            <LocalBusinessSchema />
             {/* Primary Hero Section: Landing view with main branding */}
             <section className='relative w-full min-h-screen flex flex-col md:flex-row'>
                 {/* Left Column: Text content, Logo, and CTA */}
@@ -40,21 +49,21 @@ const HeroSection = () => {
                     {/* Headline Text */}
                     <Reveal direction='left' delay={0.2}>
                         <h1 className='text-3xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-900 leading-[1.2] md:leading-[1.1] mb-6 tracking-tight'>
-                            Building Kerala’s Future{" "}
+                            Building kerala’s future{" "}
                             <br className='hidden lg:block' />
-                            With Precision & <br className='hidden lg:block' />
-                            Integrity
+                            with precision & <br className='hidden lg:block' />
+                            integrity
                         </h1>
                     </Reveal>
 
                     {/* Subheadline Description */}
                     <Reveal direction='left' delay={0.4}>
                         <p className='text-gray-500 text-sm sm:text-base md:text-sm lg:text-lg font-medium leading-relaxed max-w-lg mb-8 md:mb-10'>
-                            Crafting Government, Institutional, And{" "}
+                            Crafting government, institutional, and{" "}
                             <br className='hidden xl:block' />
-                            Residential Spaces With Trusted Engineering{" "}
+                            residential spaces with trusted engineering{" "}
                             <br className='hidden xl:block' />
-                            And Modern Design.
+                            and modern design.
                         </p>
                     </Reveal>
 
@@ -64,7 +73,7 @@ const HeroSection = () => {
                             <button
                                 onClick={() => setIsModalOpen(true)}
                                 className='bg-[#333333] hover:bg-black text-white text-xs sm:text-sm lg:text-base font-semibold py-3 px-6 md:px-8 transition-all duration-300 transform hover:scale-105 rounded-none tracking-wider'>
-                                CONTACT US
+                                Contact us
                             </button>
 
                             <button
@@ -74,7 +83,7 @@ const HeroSection = () => {
                                         ?.scrollIntoView({ behavior: "smooth" })
                                 }
                                 className='text-[#333333] text-xs sm:text-sm lg:text-base font-bold bg-transparent border-none cursor-pointer tracking-wider hover:text-black transition-colors'>
-                                READ MORE
+                                Read more
                             </button>
                         </div>
                     </Reveal>
@@ -86,7 +95,8 @@ const HeroSection = () => {
                         <motion.img
                             key={currentImageIndex}
                             src={heroImages[currentImageIndex]}
-                            alt={`Construction Project ${currentImageIndex + 1}`}
+                            alt={`Construction Project ${currentImageIndex + 1
+                                }`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
@@ -102,8 +112,8 @@ const HeroSection = () => {
                                 key={index}
                                 onClick={() => setCurrentImageIndex(index)}
                                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentImageIndex === index
-                                    ? 'bg-white w-8'
-                                    : 'bg-white/50 hover:bg-white'
+                                        ? "bg-white w-8"
+                                        : "bg-white/50 hover:bg-white"
                                     }`}
                                 aria-label={`Go to slide ${index + 1}`}
                             />
@@ -139,34 +149,34 @@ const HeroSection = () => {
                             </Reveal>
                             <Reveal direction='right' delay={0.2}>
                                 <h2 className='text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-[#2b2b2b] leading-tight mb-8'>
-                                    We Deliver Trusted & Quality Construction
-                                    Solutions
+                                    We deliver trusted & quality construction
+                                    solutions
                                 </h2>
                             </Reveal>
                             <Reveal direction='right' delay={0.4}>
                                 <div className='text-gray-600 text-base leading-relaxed space-y-4 font-medium'>
                                     <p>
-                                        Established Nearly One Decade Ago In
+                                        Established nearly one decade ago in
                                         Thiruvananthapuram, Porticade Builders &
-                                        Developers Has Grown Into A Trusted Name
-                                        In Kerala's Construction And Contracting
-                                        Industry.
+                                        Developers has grown into a trusted name
+                                        in Kerala's construction and contracting
+                                        industry.
                                     </p>
                                     <p>
-                                        We Specialize In Government,
-                                        Institutional, Architectural, And
-                                        Residential Projects Combining Quality
-                                        Engineering, Modern Design, And On-Site
-                                        Efficiency.
+                                        We specialize in government,
+                                        institutional, architectural, and
+                                        residential projects combining quality
+                                        engineering, modern design, and on-site
+                                        efficiency.
                                     </p>
                                     <p>
-                                        Our Strength Lies In Our People: A
-                                        Dynamic Management Team, Expert
-                                        Engineers, Skilled Project Managers, And
-                                        Trained Technicians Who Work
-                                        Collaboratively To Ensure Quality,
-                                        Safety, And Timely Delivery In Every
-                                        Project.
+                                        Our strength lies in our people: a
+                                        dynamic management team, expert
+                                        engineers, skilled project managers, and
+                                        trained technicians who work
+                                        collaboratively to ensure quality,
+                                        safety, and timely delivery in every
+                                        project.
                                     </p>
                                 </div>
                             </Reveal>
@@ -175,10 +185,26 @@ const HeroSection = () => {
 
                     {/* Key Statistics Grid */}
                     <div className='grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6'>
-                        <StatCard number="10+" label="Years Of Experience" delay={0.1} />
-                        <StatCard number="20+" label="Total Clients" delay={0.3} />
-                        <StatCard number="20+" label="Government Projects" delay={0.5} />
-                        <StatCard number="3+" label="Residential/Villa" delay={0.7} />
+                        <StatCard
+                            number='10+'
+                            label='Years of experience'
+                            delay={0.1}
+                        />
+                        <StatCard
+                            number='20+'
+                            label='Total clients'
+                            delay={0.3}
+                        />
+                        <StatCard
+                            number='20+'
+                            label='Government projects'
+                            delay={0.5}
+                        />
+                        <StatCard
+                            number='3+'
+                            label='Residential/villa'
+                            delay={0.7}
+                        />
                     </div>
                 </div>
             </section>

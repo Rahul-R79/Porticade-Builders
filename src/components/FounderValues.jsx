@@ -18,32 +18,32 @@ const coreValuesData = [
     {
         icon: "/icons/light.svg",
         title: "Teamwork",
-        description: "We Believe Great Projects Are Built Through Strong Collaboration. Our Team Works Together Across All Levels To Achieve Shared Goals With Efficiency And Unity."
+        description: "We believe great projects are built through strong collaboration. Our team works together across all levels to achieve shared goals with efficiency and unity."
     },
     {
         icon: "/icons/integrity.svg",
         title: "Integrity",
-        description: "We Conduct Every Aspect Of Our Work With Honesty, Transparency, And Accountability, Ensuring Trust At Every Stage Of A Project."
+        description: "We conduct every aspect of our work with honesty, transparency, and accountability, ensuring trust at every stage of a project."
     },
     {
         icon: "/icons/handshake.svg",
         title: "Mutual Respect",
-        description: "We Foster An Inclusive And Professional Environment Where Every Team Member, Partner, And Client Is Treated With Dignity And Respect."
+        description: "We foster an inclusive and professional environment where every team member, partner, and client is treated with dignity and respect."
     },
     {
         icon: "/icons/user.svg",
         title: "Innovation",
-        description: "We Embrace New Ideas, Modern Technologies, And Creative Problem-Solving To Deliver Better, Smarter, And More Sustainable Project Outcomes."
+        description: "We embrace new ideas, modern technologies, and creative problem-solving to deliver better, smarter, and more sustainable project outcomes."
     },
     {
         icon: "/icons/Vector.svg",
         title: "Loyalty",
-        description: "We Value Long-Standing Relationships And Remain Committed To Our Clients, Partners, And Team Members Through Every Phase Of Our Journey."
+        description: "We value long-standing relationships and remain committed to our clients, partners, and team members through every phase of our journey."
     },
     {
         icon: "/icons/customerCare.png",
         title: "Customer Focus",
-        description: "We Prioritize Customer Satisfaction By Delivering Quality Workmanship, Dependable Service, And Continuous Support Throughout Each Project."
+        description: "We prioritize customer satisfaction by delivering quality workmanship, dependable service, and continuous support throughout each project."
     }
 ];
 
@@ -70,15 +70,15 @@ const FounderValues = () => {
 
                             {/* Founder Biography Content */}
                             <div className="w-full lg:w-2/3">
-                                <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-8 uppercase tracking-wide">
-                                    Founder’s Detail
+                                <h2 className="text-3xl md:text-4xl font-bold text-[#333333] mb-8 tracking-wide">
+                                    Founder’s detail
                                 </h2>
                                 <div className="text-gray-600 font-medium leading-loose text-base md:text-lg space-y-4 text-justify">
                                     <p>
-                                        <strong className="text-gray-900">Sajeev Mathai</strong>, The Founder And Director Of Porticade Builders & Developers, Brings Extensive Professional Experience From Both Kerala And Saudi Arabia’s Construction Sectors. With A Strong Background In Civil Works, Project Management, And Architectural Coordination, He Established Porticade With The Vision Of Delivering High-Quality, Reliable, And Innovative Construction Solutions.
+                                        <strong className="text-gray-900">Sajeev Mathai</strong>, the founder and director of Porticade Builders & Developers, brings extensive professional experience from both Kerala and Saudi Arabia’s construction sectors. With a strong background in civil works, project management, and architectural coordination, he established Porticade with the vision of delivering high-quality, reliable, and innovative construction solutions.
                                     </p>
                                     <p>
-                                        Under His Leadership, The Company Has Successfully Executed Multiple Government, Institutional, And Residential Projects, Consistently Maintaining High Standards Of Safety, Transparency, And Timely Delivery. His Commitment To Excellence, Client Satisfaction, And Ethical Project Execution Continues To Guide Porticade’s Steady Growth And Reputation In The Industry.
+                                        Under his leadership, the company has successfully executed multiple government, institutional, and residential projects, consistently maintaining high standards of safety, transparency, and timely delivery. His commitment to excellence, client satisfaction, and ethical project execution continues to guide Porticade’s steady growth and reputation in the industry.
                                     </p>
                                 </div>
                             </div>
@@ -89,8 +89,8 @@ const FounderValues = () => {
                 {/* Core Values Grid / Carousel Section */}
                 <div>
                     <Reveal direction="left" className="mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[#333333] uppercase tracking-wide">
-                            Our Core Values
+                        <h2 className="text-3xl md:text-4xl font-bold text-[#333333] tracking-wide">
+                            Our core values
                         </h2>
                     </Reveal>
 

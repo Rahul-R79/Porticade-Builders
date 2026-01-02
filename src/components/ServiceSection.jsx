@@ -10,18 +10,18 @@ const ServiceSection = () => {
                     {/* Text Left */}
                     <div className="w-full lg:w-1/2">
                         <Reveal direction="left">
-                            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 leading-tight uppercase">
-                                Civil & Infrastructure <br /> Works
+                            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 leading-tight">
+                                Civil & infrastructure <br /> works
                             </h2>
                         </Reveal>
                         <Reveal direction="left" delay={0.2}>
                             <p className="text-gray-600 font-medium text-base mb-8 leading-relaxed">
-                                Our Civil Division Forms The Backbone Of Porticade. We Deliver Solid, Lasting Construction For Government And Private Developments — From Foundations And Structures To Roads And Utilities.
+                                Our civil division forms the backbone of Porticade. We deliver solid, lasting construction for government and private developments — from foundations and structures to roads and utilities.
                             </p>
                         </Reveal>
                         <Reveal direction="left" delay={0.4}>
                             <ul className="space-y-4">
-                                {['Site Clearing, Grading & Foundation Works', 'Reinforced Concrete And Block Masonry', 'Drainage, Paving, And Road Development', 'Structural Rehabilitation And Waterproofing'].map((item, index) => (
+                                {['Site clearing, grading & foundation works', 'Reinforced concrete and block masonry', 'Drainage, paving, and road development', 'Structural rehabilitation and waterproofing'].map((item, index) => (
                                     <li key={index} className="flex items-center gap-3">
                                         <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
                                             <img src="/icons/tick.svg" alt="Check" className="w-3 h-3" />
@@ -57,18 +57,18 @@ const ServiceSection = () => {
                     {/* Text Right */}
                     <div className="w-full lg:w-1/2">
                         <Reveal direction="right">
-                            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 uppercase leading-tight">
-                                Villa Projects
+                            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 leading-tight">
+                                Villa projects
                             </h2>
                         </Reveal>
                         <Reveal direction="right" delay={0.2}>
                             <p className="text-gray-600 font-medium text-base mb-8 leading-relaxed">
-                                Our Villa Projects Combine Kerala’s Architectural Elegance With Modern Design Sensibilities. Every Home We Build Is Unique — Customized To The Client’s Needs And Lifestyle.
+                                Our villa projects combine Kerala’s architectural elegance with modern design sensibilities. Every home we build is unique — customized to the client’s needs and lifestyle.
                             </p>
                         </Reveal>
                         <Reveal direction="right" delay={0.4}>
                             <ul className="space-y-4">
-                                {['Custom Planning & Structural Design', 'Turnkey Construction', 'Landscaping & Lighting Integration', 'Interior And Exterior Finishing', 'Sustainable Materials And Smart Home Options'].map((item, index) => (
+                                {['Custom planning & structural design', 'Turnkey construction', 'Landscaping & lighting integration', 'Interior and exterior finishing', 'Sustainable materials and smart home options'].map((item, index) => (
                                     <li key={index} className="flex items-center gap-3">
                                         <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
                                             <img src="/icons/tick.svg" alt="Check" className="w-3 h-3" />
@@ -124,18 +124,18 @@ const ServiceSection = () => {
                     {/* Text Right */}
                     <div className="w-full lg:w-1/2">
                         <Reveal direction="left">
-                            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 uppercase leading-tight">
-                                Project Management
+                            <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-8 leading-tight">
+                                Project management
                             </h2>
                         </Reveal>
                         <Reveal direction="left" delay={0.2}>
                             <p className="text-gray-600 font-medium text-base mb-8 leading-relaxed">
-                                Our Project Management Team Ensures Every Phase — From Tender To Completion — Is Handled With Efficiency, Quality, And Transparency.
+                                Our project management team ensures every phase — from tender to completion — is handled with efficiency, quality, and transparency.
                             </p>
                         </Reveal>
                         <Reveal direction="left" delay={0.4}>
                             <ul className="space-y-4">
-                                {['Scheduling & Cost Control', 'Material Sourcing & Logistics', 'Quality And Compliance Checks', 'Client Communication & Reporting'].map((item, index) => (
+                                {['Scheduling & cost control', 'Material sourcing & logistics', 'Quality and compliance checks', 'Client communication & reporting'].map((item, index) => (
                                     <li key={index} className="flex items-center gap-3">
                                         <div className="w-6 h-6 rounded-full bg-[#333333] flex items-center justify-center flex-shrink-0">
                                             <img src="/icons/tick.svg" alt="Check" className="w-3 h-3" />

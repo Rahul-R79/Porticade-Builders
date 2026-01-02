@@ -2,16 +2,16 @@ import { useState, useEffect } from 'react';
 
 const policies = [
     {
-        title: "Terms & Conditions",
-        text: "All Works Are Carried Out As Per Approved Quotations, Tenders, And Designs. Any Modifications In Design, Material, Or Scope During Execution Will Be Treated As Additional Works And Charged Accordingly"
+        title: "Terms & conditions",
+        text: "All works are carried out as per approved quotations, tenders, and designs. Any modifications in design, material, or scope during execution will be treated as additional works and charged accordingly"
     },
     {
-        title: "Privacy Policy",
-        text: "Porticade respects the confidentiality of clientdata,design concepts, and project details. Informationcollected is used solely for communicationandservicedelivery purposes."
+        title: "Privacy policy",
+        text: "Porticade respects the confidentiality of client data, design concepts, and project details. Information collected is used solely for communication and service delivery purposes."
     },
     {
-        title: "Refund Policy",
-        text: "Payments made toward project mobilization, designfees, or material procurement are non-refundableonce work has commenced. Refunds, if applicable,willbe processed based on project stageandmanagement discretion."
+        title: "Refund policy",
+        text: "Payments made toward project mobilization, design fees, or material procurement are non-refundable once work has commenced. Refunds, if applicable, will be processed based on project stage and management discretion."
     }
 ];
 
@@ -31,7 +31,7 @@ const PolicyCarousel = () => {
             <div className="max-w-4xl mx-auto flex flex-col items-center">
 
                 {/* Main Heading */}
-                <h2 className="text-3xl font-bold text-gray-800 mb-12 tracking-wide uppercase">
+                <h2 className="text-3xl font-bold text-gray-800 mb-12 tracking-wide">
                     Policies
                 </h2>
 

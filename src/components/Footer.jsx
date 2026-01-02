@@ -17,9 +17,9 @@ const Footer = () => {
                 <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 mb-10">
 
                     {/* Company Physical Address Column */}
-                    <div className="lg:w-1/3 text-[13px] leading-relaxed font-semibold text-gray-800 tracking-wide uppercase">
-                        <p>PORTICADE BUILDERS & DEVELOPERS PRIVATE</p>
-                        <p>LIMITED Nalachira - Chenchery Rd,</p>
+                    <div className="lg:w-1/3 text-[13px] leading-relaxed font-semibold text-gray-800 tracking-wide">
+                        <p>Porticade Builders & Developers Private</p>
+                        <p>Limited Nalachira - Chenchery Rd,</p>
                         <p>Nalanchira, Mannanthala,</p>
                         <p>Thiruvananthapuram, Kerala 695015, India</p>
                     </div>

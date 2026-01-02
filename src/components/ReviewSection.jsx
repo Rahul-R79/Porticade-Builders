@@ -59,7 +59,7 @@ const ReviewSection = () => {
                 {/* Left Content */}
                 <Reveal className="lg:w-1/3 flex flex-col gap-6">
                     <h2 className="text-2xl font-bold text-gray-800 tracking-wider">
-                        &#123;20+ HAPPY CLIENTS&#125;
+                        &#123;20+ happy clients&#125;
                     </h2>
                     <p className="text-gray-400 text-lg leading-relaxed max-w-sm">
                         Our construction solutions are not only scientifically tested but also trusted and validated by industry professionals and clients.

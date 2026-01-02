@@ -71,8 +71,8 @@ const ProjectGallery = () => {
 
                 {/* Section Title */}
                 <Reveal direction="down">
-                    <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-12 uppercase tracking-wide">
-                        Picture Gallery
+                    <h2 className="text-3xl lg:text-4xl font-bold text-[#333333] mb-12 tracking-wide">
+                        Picture gallery
                     </h2>
                 </Reveal>
 

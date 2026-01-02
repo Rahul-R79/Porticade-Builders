@@ -23,17 +23,17 @@ const ContactSection = () => {
                     {/* Content Overlay: Text and Button */}
                     <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 z-10">
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-4 leading-tight">
-                            Ready To Build Your Dream ?
+                            Ready to build your dream?
                         </h2>
                         <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-white mb-10 leading-tight">
-                            Schedule Our Consultation Today
+                            Schedule our consultation today
                         </h2>
 
                         <button
                             onClick={() => setIsModalOpen(true)}
                             className="bg-white text-black px-8 py-3 rounded-full flex items-center gap-3 font-medium hover:bg-gray-100 transition-colors group/btn cursor-pointer"
                         >
-                            Contact Us
+                            Contact us
                             <span className="bg-black text-white rounded-full p-1 transition-transform group-hover/btn:translate-x-1">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-4 h-4">
                                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />

@@ -120,7 +120,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 
                     <div className='mb-8'>
                         <h3 className='text-2xl font-bold text-gray-900 mb-2'>
-                            CONTACT US
+                            Contact us
                         </h3>
                         <p className='text-gray-500 text-sm font-medium'>
                             You can reach us anytime
@@ -207,11 +207,11 @@ const ContactModal = ({ isOpen, onClose }) => {
                 {/* Right Info Section: Company details and social links */}
                 <div className='w-full lg:w-5/12 p-8 lg:p-12 text-gray-800 flex flex-col gap-8 bg-sky-50'>
                     <div className='space-y-1 text-sm md:text-base leading-relaxed font-medium'>
-                        <p className='uppercase font-semibold'>
-                            PORTICADE BUILDERS & DEVELOPERS
+                        <p className='font-semibold'>
+                            Porticade Builders & Developers
                         </p>
-                        <p className='uppercase font-semibold'>
-                            PRIVATE LIMITED Nalachira -
+                        <p className='font-semibold'>
+                            Private Limited Nalachira -
                         </p>
                         <p>Chenchery Rd, Nalanchira, Mannanthala,</p>
                         <p>Thiruvananthapuram, Kerala</p>
