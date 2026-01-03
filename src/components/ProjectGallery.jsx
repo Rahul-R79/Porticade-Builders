@@ -8,7 +8,7 @@ const images = [
     { id: 3, src: "/images/Picture Gallery Images/20251219_2014_Residential Parking Conversion_remix_01kcvh1134f8bt2jcrc3hpdr6j (1).webp", alt: "Residential Parking Conversion", title: "Balaramapuram Villa Project" },
     { id: 4, src: "/images/Picture Gallery Images/20251219_2028_White House Transformation_remix_01kcvhv0p1ffcsg8ty34q3rw1r (1).webp", alt: "White House Transformation", title: "Balaramapuram Villa Project" },
     { id: 5, src: "/images/Picture Gallery Images/IMG_5560.webp", alt: "Project Image 5", title: "Balaramapuram Villa Project" },
-    { id: 6, src: "/images/Picture Gallery Images/Rectangle 13-1.webp", alt: "Project Image 7", title: "Balaramapuram Villa Project" },
+    { id: 6, src: "/images/Picture Gallery Images/Rectangle 13-1.jpg", alt: "Project Image 7", title: "Balaramapuram Villa Project" },
     { id: 7, src: "/images/Picture Gallery Images/Rectangle 13.jpg", alt: "Project Image 8", title: "Balaramapuram Villa Project" },
     { id: 8, src: "/images/Picture Gallery Images/bal.webp", alt: "Balcony Project 1", title: "Balaramapuram Villa Project" },
     { id: 9, src: "/images/Picture Gallery Images/bal2.webp", alt: "Balcony Project 2", title: "Balaramapuram Villa Project" },
@@ -101,7 +101,7 @@ const ProjectGallery = () => {
                         onDragEnd={(_, info) => {
                             if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) return;
 
-                            if (info.offset.x < -50) nextSlide(); //                            if (info.offset.x > 50) prevSlide();
+                            if (info.offset.x < -50) nextSlide();                           
                         }}
                     >
                         <AnimatePresence initial={false}>
