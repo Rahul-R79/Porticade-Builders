@@ -1,27 +1,28 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Reveal from './Reveal';
 
 const images = [
-    { id: 1, src: "/images/Picture Gallery Images/1000184976.webp", alt: "Project Image 1" },
-    { id: 2, src: "/images/Picture Gallery Images/1000184982.webp", alt: "Project Image 2" },
-    { id: 3, src: "/images/Picture Gallery Images/20251219_2014_Residential Parking Conversion_remix_01kcvh1134f8bt2jcrc3hpdr6j (1).webp", alt: "Residential Parking Conversion" },
-    { id: 4, src: "/images/Picture Gallery Images/20251219_2028_White House Transformation_remix_01kcvhv0p1ffcsg8ty34q3rw1r (1).webp", alt: "White House Transformation" },
-    { id: 5, src: "/images/Picture Gallery Images/IMG_5560.webp", alt: "Project Image 5" },
-    { id: 6, src: "/images/Picture Gallery Images/Rectangle 12.webp", alt: "Project Image 6" },
-    { id: 7, src: "/images/Picture Gallery Images/Rectangle 13-1.webp", alt: "Project Image 7" },
-    { id: 8, src: "/images/Picture Gallery Images/Rectangle 13.jpg", alt: "Project Image 8" },
-    { id: 9, src: "/images/Picture Gallery Images/bal.webp", alt: "Balcony Project 1" },
-    { id: 10, src: "/images/Picture Gallery Images/bal2.webp", alt: "Balcony Project 2" },
-    { id: 11, src: "/images/Picture Gallery Images/bal3.webp", alt: "Balcony Project 3" },
-    { id: 12, src: "/images/Picture Gallery Images/bal4.webp", alt: "Balcony Project 4" },
-    { id: 13, src: "/images/Picture Gallery Images/nedu.webp", alt: "Nedu Project 1" },
-    { id: 14, src: "/images/Picture Gallery Images/nedu2.webp", alt: "Nedu Project 2" },
+    { id: 1, src: "/images/Picture Gallery Images/1000184976.webp", alt: "Project Image 1", title: "Balaramapuram Villa Project" },
+    { id: 2, src: "/images/Picture Gallery Images/1000184982.webp", alt: "Project Image 2", title: "Balaramapuram Villa Project" },
+    { id: 3, src: "/images/Picture Gallery Images/20251219_2014_Residential Parking Conversion_remix_01kcvh1134f8bt2jcrc3hpdr6j (1).webp", alt: "Residential Parking Conversion", title: "Balaramapuram Villa Project" },
+    { id: 4, src: "/images/Picture Gallery Images/20251219_2028_White House Transformation_remix_01kcvhv0p1ffcsg8ty34q3rw1r (1).webp", alt: "White House Transformation", title: "Balaramapuram Villa Project" },
+    { id: 5, src: "/images/Picture Gallery Images/IMG_5560.webp", alt: "Project Image 5", title: "Balaramapuram Villa Project" },
+    { id: 6, src: "/images/Picture Gallery Images/Rectangle 13-1.webp", alt: "Project Image 7", title: "Balaramapuram Villa Project" },
+    { id: 7, src: "/images/Picture Gallery Images/Rectangle 13.jpg", alt: "Project Image 8", title: "Balaramapuram Villa Project" },
+    { id: 8, src: "/images/Picture Gallery Images/bal.webp", alt: "Balcony Project 1", title: "Balaramapuram Villa Project" },
+    { id: 9, src: "/images/Picture Gallery Images/bal2.webp", alt: "Balcony Project 2", title: "Balaramapuram Villa Project" },
+    { id: 10, src: "/images/Picture Gallery Images/bal3.webp", alt: "Balcony Project 3", title: "Balaramapuram Villa Project" },
+    { id: 11, src: "/images/Picture Gallery Images/bal4.webp", alt: "Balcony Project 4", title: "Balaramapuram Villa Project" },
+    { id: 12, src: "/images/Picture Gallery Images/nedu.webp", alt: "Nedu Project 1", title: "GOVT Collage Nedumangad" },
+    { id: 13, src: "/images/Picture Gallery Images/nedu2.webp", alt: "Nedu Project 2", title: "GOVT Collage Nedumangad" },
 ];
 
 const ProjectGallery = () => {
     const [activeIndex, setActiveIndex] = useState(1);
+    const [isHovered, setIsHovered] = useState(false);
     const lastWheelTime = useRef(0);
+
     const nextSlide = () => {
         setActiveIndex((prev) => (prev + 1) % images.length);
     };
@@ -29,6 +30,12 @@ const ProjectGallery = () => {
     const prevSlide = () => {
         setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
     };
+
+    useEffect(() => {
+        if (isHovered) return;
+        const interval = setInterval(nextSlide, 3000);
+        return () => clearInterval(interval);
+    }, [isHovered]);
 
     const getSlideStyles = (index) => {
         if (index === activeIndex) return {
@@ -65,7 +72,6 @@ const ProjectGallery = () => {
     };
 
     return (
-        /* Gallery Section Layout */
         <section className="w-full bg-[#F2F9FD] py-20 overflow-hidden">
             <div className="max-w-350 mx-auto text-center">
 
@@ -78,7 +84,9 @@ const ProjectGallery = () => {
 
                 {/* 3D Carousel Display Area */}
                 <div
-                    className="relative h-100 md:h-125 flex items-center justify-center mt-10 cursor-grab active:cursor-grabbing touch-none"
+                    className="relative h-110 md:h-135 flex items-center justify-center mt-10 cursor-grab active:cursor-grabbing touch-none"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
                     onWheel={(e) => {
                         const now = Date.now();
                         if (now - lastWheelTime.current < 400) return;
@@ -106,7 +114,7 @@ const ProjectGallery = () => {
                                 return (
                                     <motion.div
                                         key={img.id}
-                                        className="absolute w-[80%] md:w-[60%] lg:w-[50%] h-62.5 md:h-87.5 lg:h-100 rounded-3xl overflow-hidden shadow-2xl cursor-pointer"
+                                        className="absolute w-[80%] md:w-[60%] lg:w-[50%] h-auto rounded-3xl overflow-hidden shadow-2xl cursor-pointer bg-white flex flex-col"
                                         initial={styles}
                                         animate={styles}
                                         transition={{
@@ -121,11 +129,18 @@ const ProjectGallery = () => {
                                             transformOrigin: 'center center'
                                         }}
                                     >
-                                        <img
-                                            src={img.src}
-                                            alt={img.alt}
-                                            className="w-full h-full object-cover pointer-events-none"
-                                        />
+                                        <div className="h-62.5 md:h-87.5 lg:h-100 w-full relative">
+                                            <img
+                                                src={img.src}
+                                                alt={img.alt}
+                                                className="w-full h-full object-cover pointer-events-none"
+                                            />
+                                        </div>
+                                        <div className="p-4 md:p-6 bg-white min-h-[80px] md:min-h-[100px] flex items-center justify-center border-t border-gray-100">
+                                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-[#333333] text-center">
+                                                {img.title}
+                                            </h3>
+                                        </div>
                                     </motion.div>
                                 );
                             })}
@@ -143,6 +158,11 @@ const ProjectGallery = () => {
                             end = Math.min(2, images.length - 1);
                         } else if (activeIndex === images.length - 1) {
                             start = Math.max(0, images.length - 3);
+                        }
+
+                        if (end - start < 2 && images.length > 2) {
+                            if (start === 0) end = 2;
+                            if (end === images.length - 1) start = images.length - 3;
                         }
 
                         return images.slice(start, end + 1).map((_, i) => {

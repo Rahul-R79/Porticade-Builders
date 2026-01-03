@@ -9,7 +9,7 @@ import emailjs from "@emailjs/browser";
 const schema = z.object({
     firstName: z.string().min(1, { message: "First name is required" }),
     lastName: z.string().min(1, { message: "Last name is required" }),
-    email: z.string().optional().or(z.string().email().optional()), // Allow empty or valid email
+    email: z.string().optional().or(z.string().email().optional()), 
     phone: z.string().min(10, { message: "Valid phone number is required" }),
     message: z.string().min(5, { message: "Message must be at least 5 characters" }),
 });
@@ -43,7 +43,7 @@ const ContactModal = ({ isOpen, onClose }) => {
             email: data.email,
             phone: data.phone,
             message: data.message,
-            to_email: "porticade911@gmail.com",
+            to_email: "info@porticadebuilders.com"
         };
 
         emailjs
@@ -220,7 +220,7 @@ const ContactModal = ({ isOpen, onClose }) => {
 
                     <div className='space-y-4 font-medium text-sm md:text-base'>
                         <p>Phone : +91 98956 31515</p>
-                        <p>Email Address : porticade911@gmail.com</p>
+                        <p>Email Address : info@porticadebuilders.com</p>
                     </div>
 
                     <div className='mt-4'>
