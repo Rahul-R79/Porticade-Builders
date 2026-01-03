@@ -84,27 +84,36 @@ const ProjectGallery = () => {
 
                 {/* 3D Carousel Display Area */}
                 <div
-                    className="relative h-110 md:h-135 flex items-center justify-center mt-10 cursor-grab active:cursor-grabbing touch-none"
+                    className="relative h-110 md:h-135 flex items-center justify-center mt-10 cursor-grab active:cursor-grabbing touch-pan-y"
                     onMouseEnter={() => setIsHovered(true)}
                     onMouseLeave={() => setIsHovered(false)}
+                    onTouchStart={() => setIsHovered(true)}
+                    onTouchEnd={() => setIsHovered(false)}
                     onWheel={(e) => {
+                        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) return;
+
                         const now = Date.now();
                         if (now - lastWheelTime.current < 400) return;
 
-                        if (Math.abs(e.deltaX) > 20 || Math.abs(e.deltaY) > 20) {
-                            if (e.deltaX > 0 || e.deltaY > 0) nextSlide();
+                        if (Math.abs(e.deltaX) > 20) {
+                            if (e.deltaX > 0) nextSlide();
                             else prevSlide();
                             lastWheelTime.current = now;
                         }
                     }}
                 >
                     <motion.div
-                        className="relative w-full max-w-4xl h-full flex items-center justify-center"
+                        className="relative w-full max-w-4xl h-full flex items-center justify-center touch-pan-y"
                         drag="x"
+                        dragDirectionLock
+                        dragMomentum={false}
+                        dragElastic={0.2}
                         dragConstraints={{ left: 0, right: 0 }}
                         onDragEnd={(_, info) => {
-                            if (info.offset.x < -50) nextSlide();
-                            if (info.offset.x > 50) prevSlide();
+                            if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) return;
+
+                            if (info.offset.x < -100) nextSlide();
+                            if (info.offset.x > 100) prevSlide();
                         }}
                     >
                         <AnimatePresence initial={false}>
