@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Reveal from './Reveal';
 
@@ -20,7 +20,6 @@ const images = [
 
 const ProjectGallery = () => {
     const [activeIndex, setActiveIndex] = useState(1);
-    const [isHovered, setIsHovered] = useState(false);
     const lastWheelTime = useRef(0);
 
     const nextSlide = () => {
@@ -30,12 +29,6 @@ const ProjectGallery = () => {
     const prevSlide = () => {
         setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
     };
-
-    useEffect(() => {
-        if (isHovered) return;
-        const interval = setInterval(nextSlide, 3000);
-        return () => clearInterval(interval);
-    }, [isHovered]);
 
     const getSlideStyles = (index) => {
         if (index === activeIndex) return {
@@ -85,18 +78,14 @@ const ProjectGallery = () => {
                 {/* 3D Carousel Display Area */}
                 <div
                     className="relative h-110 md:h-135 flex items-center justify-center mt-10 cursor-grab active:cursor-grabbing touch-pan-y"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                    onTouchStart={() => setIsHovered(true)}
-                    onTouchEnd={() => setIsHovered(false)}
                     onWheel={(e) => {
-                        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) return;
+                        const delta = Math.abs(e.deltaY) > Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
 
                         const now = Date.now();
-                        if (now - lastWheelTime.current < 400) return;
+                        if (now - lastWheelTime.current < 200) return;
 
-                        if (Math.abs(e.deltaX) > 20) {
-                            if (e.deltaX > 0) nextSlide();
+                        if (Math.abs(delta) > 20) {
+                            if (delta > 0) nextSlide();
                             else prevSlide();
                             lastWheelTime.current = now;
                         }
@@ -112,8 +101,7 @@ const ProjectGallery = () => {
                         onDragEnd={(_, info) => {
                             if (Math.abs(info.offset.y) > Math.abs(info.offset.x)) return;
 
-                            if (info.offset.x < -100) nextSlide();
-                            if (info.offset.x > 100) prevSlide();
+                            if (info.offset.x < -50) nextSlide(); //                            if (info.offset.x > 50) prevSlide();
                         }}
                     >
                         <AnimatePresence initial={false}>
