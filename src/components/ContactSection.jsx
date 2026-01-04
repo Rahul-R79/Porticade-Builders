@@ -52,7 +52,7 @@ const ContactSection = () => {
                         <div className="text-gray-600 space-y-1 leading-relaxed text-lg">
                             <p className="font-semibold text-gray-800">PORTICADE BUILDERS &</p>
                             <p className="font-semibold text-gray-800">DEVELOPERS PRIVATE LIMITED</p>
-                            <p>Nalachira - Chenchery Rd,</p>
+                            <p>Nalanchira - Chenchery Rd,</p>
                             <p>Nalanchira, Mannanthala,</p>
                             <p>Thiruvananthapuram, Kerala</p>
                             <p>695015, India</p>

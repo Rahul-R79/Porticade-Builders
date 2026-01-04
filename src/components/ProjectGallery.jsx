@@ -14,8 +14,8 @@ const images = [
     { id: 9, src: "/images/Picture Gallery Images/bal2.webp", alt: "Balcony Project 2", title: "Balaramapuram Villa Project" },
     { id: 10, src: "/images/Picture Gallery Images/bal3.webp", alt: "Balcony Project 3", title: "Balaramapuram Villa Project" },
     { id: 11, src: "/images/Picture Gallery Images/bal4.webp", alt: "Balcony Project 4", title: "Balaramapuram Villa Project" },
-    { id: 12, src: "/images/Picture Gallery Images/nedu.webp", alt: "Nedu Project 1", title: "GOVT Collage Nedumangad" },
-    { id: 13, src: "/images/Picture Gallery Images/nedu2.webp", alt: "Nedu Project 2", title: "GOVT Collage Nedumangad" },
+    { id: 12, src: "/images/Picture Gallery Images/nedu.webp", alt: "Nedu Project 1", title: "GOVT College Nedumangad" },
+    { id: 13, src: "/images/Picture Gallery Images/nedu2.webp", alt: "Nedu Project 2", title: "GOVT College Nedumangad" },
 ];
 
 const ProjectGallery = () => {

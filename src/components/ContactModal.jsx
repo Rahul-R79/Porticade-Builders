@@ -211,7 +211,7 @@ const ContactModal = ({ isOpen, onClose }) => {
                             Porticade Builders & Developers
                         </p>
                         <p className='font-semibold'>
-                            Private Limited Nalachira -
+                            Private Limited Nalanchira -
                         </p>
                         <p>Chenchery Rd, Nalanchira, Mannanthala,</p>
                         <p>Thiruvananthapuram, Kerala</p>

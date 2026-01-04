@@ -19,7 +19,7 @@ const Footer = () => {
                     {/* Company Physical Address Column */}
                     <div className="lg:w-1/3 text-[13px] leading-relaxed font-semibold text-gray-800 tracking-wide">
                         <p>Porticade Builders & Developers Private</p>
-                        <p>Limited Nalachira - Chenchery Rd,</p>
+                        <p>Limited Nalanchira - Chenchery Rd,</p>
                         <p>Nalanchira, Mannanthala,</p>
                         <p>Thiruvananthapuram, Kerala 695015, India</p>
                     </div>
